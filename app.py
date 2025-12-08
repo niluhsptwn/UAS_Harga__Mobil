@@ -93,12 +93,13 @@ def cbr_predict(input_case, k=5):
 KURS_INR_TO_IDR = 190  #konversi INR ke IDR
 
 #prediksi
-if st.button("Prediksi Harga (CBR)"):
+if st.button("Prediksi Harga"):
     pred, neighbors = cbr_predict(input_scaled, k=5)
     pred_idr = pred * KURS_INR_TO_IDR
 
-    st.subheader("💰 Hasil Prediksi Harga Berdasarkan Kasus Mirip (CBR)")
+    st.subheader("Hasil Prediksi Harga Berdasarkan Kasus Mirip (CBR)")
     st.success(f"Estimasi harga mobil: Rp {pred_idr:,.0f}")
 
-    st.subheader("📌 Kasus yang Paling Mirip (Retrieve)")
+    st.subheader("Kasus yang Paling Mirip (Retrieve)")
     st.dataframe(neighbors)
+
