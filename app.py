@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 
-st.title("🚗 Sistem CBR Prediksi Harga Mobil – CarDekho Dataset")
+st.title("Sistem CBR Prediksi Harga Mobil – CarDekho Dataset")
 
 #load data
 @st.cache_data
@@ -36,7 +36,7 @@ df_scaled = pd.DataFrame(df_cbr_scaled, columns=feature_cols)
 df_scaled["selling_price"] = df_cbr["selling_price"]
 
 #form input
-st.subheader("🔧 Input Data Mobil:")
+st.subheader("Input Data Mobil:")
 
 col1, col2 = st.columns(2)
 
